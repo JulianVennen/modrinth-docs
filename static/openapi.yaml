@@ -70,10 +70,8 @@ components:
       name: ids
       description: The IDs of the projects
       schema:
-        type: array
-        items:
-          type: string
-        example: "[\"AABBCCDD\", \"EEFFGGHH\"]"
+        type: string
+        example: [AABBCCDD, EEFFGGHH]
       required: true
     UserIdentifier:
       name: id|username
@@ -2289,10 +2287,8 @@ paths:
           name: ids
           description: The IDs of the versions
           schema:
-            type: array
-            items:
-              type: string
-            example: "[\"AABBCCDD\", \"EEFFGGHH\"]"
+            type: string
+            example: [ AABBCCDD, EEFFGGHH ]
           required: true
       responses:
         "200":
