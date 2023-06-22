@@ -2546,9 +2546,7 @@ paths:
           name: ids
           description: The IDs of the users
           schema:
-            type: array
-            items:
-              type: string
+            type: string
             example: "[\"AABBCCDD\", \"EEFFGGHH\"]"
           required: true
       responses:
@@ -2836,9 +2834,7 @@ paths:
           name: ids
           description: The IDs of the teams
           schema:
-            type: array
-            items:
-              type: string
+            type: string
             example: "[\"AABBCCDD\", \"EEFFGGHH\"]"
           required: true
       responses:
