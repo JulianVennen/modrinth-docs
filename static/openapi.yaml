@@ -1286,6 +1286,7 @@ components:
         actions:
           type: array
           items:
+            title: NotificationAction
             type: object
             properties:
               title:
@@ -2952,6 +2953,7 @@ paths:
       operationId: getUserNotifications
       tags:
         - notifications
+        - users
       security:
         - TokenAuth: ['NOTIFICATION_READ']
       responses:
@@ -3111,6 +3113,7 @@ paths:
       operationId: submitReport
       tags:
         - threads
+        - misc
       security:
         - TokenAuth: ['REPORT_CREATE']
       requestBody:
@@ -3618,6 +3621,7 @@ paths:
               schema:
                 type: array
                 items:
+                  title: LicenseTag
                   type: object
                   properties:
                     short:
