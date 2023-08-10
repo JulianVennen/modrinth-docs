@@ -3774,6 +3774,7 @@ paths:
             application/json:
               schema:
                 type: object
+                title: ForgeUpdates
                 properties:
                   homepage:
                     type: string
