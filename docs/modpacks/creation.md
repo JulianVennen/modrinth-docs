@@ -1,18 +1,12 @@
 # Creating Modpacks
 
-A modpack is a list of mods bundled with additional files, such as configuration files. In general, it's a modded instance of a game ready to play, or with minor changes.
+A modpack is a list of mods bundled with additional files, such as configuration files. In general, it's a modded instance of a game ready to play.
 
-## How do I play a modpack?
+**[The Modrinth App](https://modrinth.com/app)** is the official solution for creating Modrinth modpacks. You can create a Modrinth modpack using the app by going to the Mods tab of an instance and clicking "Export modpack" near the top right. If this option is not available, you may first need to unpair the instance in the instance settings.
 
-Please see the guide for [playing modpacks](playing_modpacks.md).
+![Modrinth App export](../../static/img/tutorial/modrinthAppExport.png)
 
-## What does the Modrinth format look like?
-
-Modrinth uses its own storage layout for modpacks. This can be found on the [format definition](format_definition.md) page. The Modrinth format is unique for our purposes, so you cannot use the CurseForge format or another format to upload to Modrinth.
-
-## How do I create a modpack?
-
-You can either use [ATLauncher](https://atlauncher.com), [MultiMC](https://multimc.org), [packwiz](https://github.com/packwiz/packwiz), or [Moddermore](https://moddermore.net) to create modpacks.
+Besides [the Modrinth App](https://modrinth.com/app), you can use [ATLauncher](https://atlauncher.com), [MultiMC](https://multimc.org), [Prism Launcher](https://prismlauncher.org), [packwiz](https://github.com/packwiz/packwiz), or [Moddermore](https://moddermore.net) to create modpacks.
 
 ### ATLauncher
 
@@ -51,6 +45,15 @@ packwiz is a command-line application which allows easy creation of modpacks for
 When you have a working packwiz pack, you can use the [`packwiz mr export`] command to create a Modrinth modpack.
 
 [`packwiz mr export`]: https://packwiz.infra.link/reference/commands/packwiz_modrinth_export/
+
+### mc-modpack-kit
+
+[`mc-modpack-kit`](https://github.com/jh-devv/mc-modpack-kit) is a GitHub Action Workflow template that uses [packwiz](https://packwiz.infra.link) to manage modpacks.
+
+To setup mc-modpack-kit for Modrinth, in your repo:
+- Navigate to "Settings" -> "Secrets" and add the following secrets:
+  - `MODRINTH_TOKEN`, `MODRINTH_ID`
+- Add your packwiz pack, as an example to the `main/` directory in your repo!
 
 ### Moddermore
 

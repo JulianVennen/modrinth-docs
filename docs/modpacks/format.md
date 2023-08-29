@@ -1,6 +1,6 @@
 # Modpack Format
 
-The Modrinth modpack format is a simple format that lets you store modpacks.
+The Modrinth modpack format (`.mrpack`) is a simple format that lets you store modpacks. This is the only format of modpack that can be uploaded to Modrinth.
 
 ## Fields
 
@@ -85,6 +85,7 @@ This object contains a list of IDs and version numbers that launchers will use i
 Available dependency IDs are:
 - `minecraft` - The Minecraft game
 - `forge` - The Minecraft Forge mod loader
+- `neoforge` - The NeoForge mod loader
 - `fabric-loader` - The Fabric loader
 - `quilt-loader` - The Quilt loader
 
