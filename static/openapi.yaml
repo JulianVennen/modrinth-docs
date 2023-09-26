@@ -1634,7 +1634,7 @@ components:
       required:
         - short
         - name
-    License:
+    LicenseText200Response:
       type: object
       description: A full license
       properties:
@@ -3684,7 +3684,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/License'
+                $ref: '#/components/schemas/LicenseText200Response'
         "400":
           description: Request was invalid, see given error
           content:
