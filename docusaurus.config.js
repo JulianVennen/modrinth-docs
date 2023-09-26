@@ -6,13 +6,13 @@ module.exports = {
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'modrinth',
   projectName: 'docs',
   themeConfig: {
     navbar: {
-      title: 'Modrinth',
+      title: 'modrinth',
       logo: {
         alt: 'Modrinth Logo',
         src: 'img/logo.svg',
@@ -20,7 +20,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'index',
+          docId: 'faq/index',
           position: 'left',
           label: 'Knowledge Base',
         },
@@ -38,7 +38,6 @@ module.exports = {
       ],
     },
     footer: {
-      style: 'dark',
       links: [
         {
           items: [
@@ -49,8 +48,10 @@ module.exports = {
               html: 'Modrinth is <a href="https://github.com/modrinth">open source</a>.'
             },
             {
-              label: `modrinth/docs, built ${new Date(Date.now() - 25_200_000).toISOString().substring(0, 10)}`,
-              href: 'https://github.com/modrinth/docs',
+              html: `modrinth/docs ${process.env.CF_PAGES_BRANCH || 'master'}@<a href="https://github.com/modrinth/docs/tree/${process.env.CF_PAGES_COMMIT_SHA || 'unknown'}">${process.env.CF_PAGES_COMMIT_SHA?.substring(0, 7) || 'unknown'}</a>`,
+            },
+            {
+              html: `Public Domain/<a href="https://github.com/modrinth/docs/blob/master/LICENSE">CC0-1.0</a> (except Modrinth branding)`,
             },
           ],
         },
@@ -70,10 +71,6 @@ module.exports = {
               href: 'https://modrinth.com/legal/rules',
             },
             {
-              label: 'Security',
-              href: 'https://modrinth.com/legal/security',
-            },
-            {
               label: 'Careers',
               href: 'https://careers.modrinth.com',
             },
@@ -83,12 +80,8 @@ module.exports = {
           title: 'Resources',
           items: [
             {
-              label: 'Main site',
+              label: 'Main website',
               href: 'https://modrinth.com',
-            },
-            {
-              label: 'Modrinth App',
-              href: 'https://modrinth.com/app',
             },
             {
               label: 'Blog',
@@ -99,8 +92,8 @@ module.exports = {
               href: 'https://status.modrinth.com',
             },
             {
-              label: 'Roadmap',
-              href: 'https://roadmap.modrinth.com',
+              label: 'GitHub',
+              href: 'https://github.com/modrinth',
             },
           ],
         },
@@ -108,12 +101,8 @@ module.exports = {
           title: 'Interact',
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/modrinth',
-            },
-            {
               label: 'Discord',
-              href: 'https://discord.gg/modrinth',
+              href: 'https://discord.modrinth.com',
             },
             {
               label: 'Twitter',
@@ -130,7 +119,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `This documentation is public domain under the CC0. Built with Docusaurus.`,
+      copyright: `<span style="font-size: .75rem">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG.</span>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -166,8 +155,10 @@ module.exports = {
       {
         docs: {
           editUrl: 'https://github.com/modrinth/docs/edit/master/',
+          routeBasePath: '/',
           sidebarCollapsible: false,
         },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -194,6 +185,17 @@ module.exports = {
     ],
   ],
   plugins: [
-    ['@cmfcmf/docusaurus-search-local', {}],
+    [
+      '@cmfcmf/docusaurus-search-local',
+      {
+        indexBlog: false,
+      }
+    ],
+    [
+      "docusaurus2-dotenv",
+      {
+        systemvars: true,
+      },
+    ],
   ],
 }

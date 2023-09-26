@@ -9,7 +9,7 @@ Adrinth ads are fully compliant with GDPR, CCPA, and other privacy laws, and fal
 
 While you are not required to turn off your adblocker to access Modrinth, you would be supporting both Modrinth and its creators in the process. For the benefit of everyone involved, we humbly request that you turn off your adblocker. You can use the links on the right side to navigate to your browser or browser extension.
 
-If none of the methods shown work or if you have more questions about Adrinth, please join us on [Discord](https://discord.gg/modrinth) so that we can assist you!
+If none of the methods shown work or if you have more questions about Adrinth, please join us on [Discord](https://discord.modrinth.com) so that we can assist you!
 
 ## Browser Extensions
 
@@ -66,7 +66,7 @@ If this still didn't work, your browser may have its own protection as well. Ple
 uBlock Origin is configurable by clicking its logo, either within or next to the Extensions button (usually a puzzle piece or a double right chevron).
 
 <Tabs>
-<TabItem value="settings" label="Configure AdGuard via its settings panel">
+<TabItem value="settings" label="Configure uBlock Origin via its settings panel">
 
 From within the settings panel, it is very easy to disable ads on Modrinth. Simply click the big blue power button and then click the rotating arrows beside it to refresh the page.
 
