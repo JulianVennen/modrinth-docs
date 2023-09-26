@@ -1700,8 +1700,8 @@ components:
           description: A link to the mod page
           example: https://modrinth.com
         promos:
-          $ref: '#/components/schemas/ForgeUpdateCheckerPromos'
-    ForgeUpdateCheckerPromos:
+          $ref: '#/components/schemas/ForgeUpdatePromos'
+    ForgeUpdatePromos:
       type: object
       description: A list of the recommended and latest versions for each Minecraft release
       properties:
